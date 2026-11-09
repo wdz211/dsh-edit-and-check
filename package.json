@@ -1,0 +1,36 @@
+{
+  "name": "dsh-edit-and-check",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "One tool call that edits a file literally, then immediately runs a check command - two round-trips fused into one.",
+  "license": "MIT",
+  "author": "wdz211",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdz211/dsh-edit-and-check.git"
+  },
+  "homepage": "https://github.com/wdz211/dsh-edit-and-check#readme",
+  "bugs": {
+    "url": "https://github.com/wdz211/dsh-edit-and-check/issues"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "test",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/selftest.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

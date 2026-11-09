@@ -1,0 +1,8 @@
+# Bundle patch：顶层必须是 YAML 数组（DSH Loader 的硬要求）。
+#
+# `id` 是配置行的身份，`name` 是 Loader 要 import 的包名。
+# 本插件没有配置项（tools 是唯一依赖，注册行为固定），所以只声明一行、不带 config：
+# 传一个本插件没声明过的 config 反而可能触发 schema 校验失败。
+- insert:
+    - id: edit-and-check
+      name: '@local/dsh-edit-and-check'
